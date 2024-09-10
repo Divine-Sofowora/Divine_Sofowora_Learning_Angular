@@ -10,4 +10,6 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Divine_Sofowora_Learning_Angular';
+  sportName: string = 'Football';
+  jerseyNumber: string = '48';
 }
