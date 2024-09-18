@@ -3,5 +3,5 @@ export interface User {
     studentEmail?: string;
     phone: string;   
     studentId: number;
-  isActive: boolean;
+  isPresent: boolean;
 }
