@@ -1,7 +1,7 @@
 export interface User {
+    studentId: number;
     studentName: string;
     studentEmail?: string;
     phone: string;   
-    studentId: number;
-  isPresent: boolean;
+    isPresent: boolean;
 }
