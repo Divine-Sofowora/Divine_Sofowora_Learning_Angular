@@ -1,22 +1,4 @@
-    <div class="container ">
-        <h2 class="h2">Student List</h2>
-      
-
-        <!-- first structural dirivative -->
-        <div class="user-card   "  *ngFor="let user of userList">
-          <p class="user-card p">{{ user.studentId }}</p>
-          <p>{{ user.studentName }}</p>
-          <p>{{ user.phone }}</p>
-          <p >{{ user.isPresent }}</p>
-          <p class=>{{ user1.studentName }}</p>
-          <div></div>
-
-          <!-- Second structural derivatives -->
-          <p *ngIf="user.studentEmail">Email{{ user.studentEmail }}</p>
-          
-        </div>
-      </div>
-   
+<app-student-list></app-student-list>
       
 
 
