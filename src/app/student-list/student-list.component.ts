@@ -7,7 +7,7 @@ import { StudentListItemComponent } from '../student-list-item/student-list-item
 @Component({
   selector: 'app-student-list',
   standalone: true,
-  imports: [FormsModule,StudentListComponent,NgFor],
+  imports: [FormsModule, StudentListComponent, NgFor, StudentListItemComponent],
   templateUrl: './student-list.component.html',
   styleUrl: './student-list.component.scss'
 })
