@@ -1,5 +1,6 @@
-<h1>Student list </h1>
-<p>{{userList[0].studentId}}</p>
-<p>{{userList[1].studentName}}</p>
-<p>{{userList[2].studentEmail}}</p>
-<p>{{userList[3].phone}}</p> 
+<h1>Student List</h1>
+<div *ngFor="let student of userList">
+    <app-student-list-item  [student]="student">
+
+    </app-student-list-item>
+</div>
