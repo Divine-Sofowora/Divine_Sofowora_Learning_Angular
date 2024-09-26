@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+import {NgClass, NgFor} from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { User } from '../Shared/Models/user';
@@ -7,7 +7,7 @@ import { StudentListItemComponent } from '../student-list-item/student-list-item
 @Component({
   selector: 'app-student-list',
   standalone: true,
-  imports: [FormsModule, StudentListComponent, NgFor, StudentListItemComponent],
+  imports: [FormsModule, StudentListComponent, NgFor, StudentListItemComponent, NgClass],
   templateUrl: './student-list.component.html',
   styleUrl: './student-list.component.scss'
 })
