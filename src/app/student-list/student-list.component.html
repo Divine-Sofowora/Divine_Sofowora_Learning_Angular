@@ -1,7 +1,10 @@
-<h1>Student List</h1>
-<div *ngFor="let student of userList; let i = index">
 
-     <app-student-list-item [student]="student" [ngClass]="{'even-item': i % 2 ===0, 'odd-item': i % 2 === 1}"></app-student-list-item>
+<div *ngFor="let student of userList">
+  <h3> name: {{student.studentName}} </h3>
+  <p> Email: {{student.studentEmail}}</p>
+  <p> Phone Number: {{student.phone}}</p>
 </div>
+
+
 
 

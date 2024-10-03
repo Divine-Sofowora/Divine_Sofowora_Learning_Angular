@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { User } from '../Shared/Models/user';
 import { StudentListItemComponent } from '../student-list-item/student-list-item.component'
+import {userList} from "../Shared/Models/mockData-user";
 
 @Component({
   selector: 'app-student-list',
@@ -14,4 +15,5 @@ import { StudentListItemComponent } from '../student-list-item/student-list-item
 
 export class StudentListComponent {
 
+  protected readonly userList = userList;
 }
