@@ -14,7 +14,7 @@ import { StudentListComponent} from './student-list/student-list.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Divine_Sofowora_Learning_Angular';
+  title = 'Student Lists';
 
 // userList = [
 //  {  studentId: 1, studentName: "Matt", studentEmail: "Haug@gmail.com", phone: "309-3739-1353", isPresent: false},
@@ -26,5 +26,5 @@ export class AppComponent {
 // ];
 // user1 = { studentId: 1, studentName: 'Matt', studentEmail: 'Haug@gmail.com' };
 
- 
+
 }
