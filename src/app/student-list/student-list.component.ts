@@ -1,9 +1,10 @@
 import {NgClass, NgFor} from '@angular/common';
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { User } from '../Shared/Models/user';
 import { StudentListItemComponent } from '../student-list-item/student-list-item.component'
 import {userList} from "../Shared/Models/mockData-user";
+import {UserService} from "../services/user.service";
 
 @Component({
   selector: 'app-student-list',
@@ -13,7 +14,15 @@ import {userList} from "../Shared/Models/mockData-user";
   styleUrl: './student-list.component.scss'
 })
 
-export class StudentListComponent {
+export class StudentListComponent implements OnInit {
+
+  showColumns: String[]=['id','name','email','phone']
+
+
+  constructor(private studentInfo: UserService) {
+  }
+  ngOnInit(): void {
+  }
 
   protected readonly userList = userList;
 }
