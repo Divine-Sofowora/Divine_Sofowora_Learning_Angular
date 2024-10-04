@@ -3,13 +3,15 @@ import { RouterOutlet } from '@angular/router';
 import { User } from './Shared/Models/user';
 import { NgForOf, NgIf} from '@angular/common';
 import { StudentListComponent} from './student-list/student-list.component';
+import {StudentListItemComponent} from "./student-list-item/student-list-item.component";
+import {userList} from "./Shared/Models/mockData-user";
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, NgIf,StudentListComponent],
+  imports: [RouterOutlet, NgForOf, NgIf, StudentListComponent, StudentListItemComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -27,4 +29,5 @@ export class AppComponent {
 // user1 = { studentId: 1, studentName: 'Matt', studentEmail: 'Haug@gmail.com' };
 
 
+  protected readonly userList = userList;
 }

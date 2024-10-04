@@ -1,5 +1,5 @@
 
-<div *ngFor="let student of userList">
+<div *ngFor="let student of userList" (click)="selectedStudent(student)">
   <h3> name: {{student.studentName}} </h3>
   <p> Email: {{student.studentEmail}}</p>
   <p> Phone Number: {{student.phone}}</p>
