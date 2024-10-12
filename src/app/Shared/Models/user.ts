@@ -2,6 +2,7 @@ export interface User {
     studentId: number;
     studentName: string;
     studentEmail: string;
-    phone: string;   
+    phone: string;
     isPresent?: boolean;
+    imgPath: string;
 }

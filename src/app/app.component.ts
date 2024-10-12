@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import { User } from './Shared/Models/user';
 import { NgForOf, NgIf} from '@angular/common';
 import { StudentListComponent} from './student-list/student-list.component';
@@ -11,7 +11,7 @@ import {userList} from "./Shared/Models/mockData-user";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, NgIf, StudentListComponent, StudentListItemComponent],
+  imports: [RouterOutlet, NgForOf, NgIf, StudentListComponent, StudentListItemComponent, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
