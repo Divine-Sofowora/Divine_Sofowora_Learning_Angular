@@ -31,18 +31,21 @@ export class UserService {
     if (index !== -1) {
       this.users[index] = updateStudent;
     }
-    return of(this.users);
+    return of (this.users);
   }
 
   // Delete: Delete User
-  deleteStudent(id: number): Observable<User[]> {
-    this.users = this.users.filter(userList => userList.studentId !== id);
-    return of(this.users);
+  deleteStudent(studentId: number){
+    console.log("working")
+    delete this.users[studentId -1 ]
   }
 
   // Read: Get User by ID
   getUserById(id: number): Observable<User | undefined> {
-    const user = this.users.find(userList => userList.studentId === id);
-    return of(user);
+    const users = this.users.find(userList => userList.studentId === id);
+    return of ();
+  }
+  generateNewId():number{
+    return this.users.length>0? Math.max(... this.users.map(userList => userList.studentId)) + 1:1;
   }
 }

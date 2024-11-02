@@ -1,1 +1,27 @@
-<p>modify-student works!</p>
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()" class="student-form">
+
+  <div class="form-group">
+    <label for="id">ID</label>
+    <input type="number" id="id" formControlName="id" class="form-input"/>
+  </div>
+
+  <div class="form-group">
+    <label for="studentName">Name</label>
+    <input type="text" id="studentName" formControlName="studentName" class="form-input"/>
+  </div>
+
+  <div class="form-group">
+    <label for="studentEmail">Email</label>
+    <input type="text" id="studentEmail" formControlName="studentEmail" class="form-input"/>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" formControlName="phone" class="form-input"/>
+  </div>
+
+  <div class="form-button">  <!-- Changed from "from-button" to "form-button" -->
+    <button type="button" (click)="onAdd()" class="btn add-btn">Add</button>
+    <button type="button" (click)="onUpdate()" class="btn update-btn">Update</button>
+  </div>
+</form>
