@@ -2,9 +2,10 @@
 <div *ngFor="let student of userList" (click)="selectedStudent(student)">
   <img [src]="student.imgPath">
   <h3>Id:{{student.studentId}}</h3>
-  <h3> name: {{student.studentName}} </h3>
+  <h3> name: {{student.studentName | uppercase}} </h3>
   <p> Email: {{student.studentEmail}}</p>
-  <p> Phone Number: {{student.phone}}</p>
+  <p> Grade: {{student.phone | lowercase}}</p>
+  <p> School fees: {{student.fees | currency:'CAD': "symbol-narrow"}}</p>
 
   <div><button type="button" (click)="onEdit()" class="btn edit-btn">EDIT</button></div>
   <div><button type="button" (click)="onDelete(student.studentId)" class="btn delete-btn">Delete</button></div>

@@ -1,4 +1,4 @@
-import {NgClass, NgFor} from '@angular/common';
+import {CurrencyPipe, LowerCasePipe, NgClass, NgFor, PercentPipe, UpperCasePipe} from '@angular/common';
 import {Component, OnInit} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { User } from '../Shared/Models/user';
@@ -13,7 +13,7 @@ import {Router,RouterLink} from "@angular/router";
 @Component({
   selector: 'app-student-list',
   standalone: true,
-  imports: [FormsModule, NgFor, NgClass,RouterLink ],
+  imports: [FormsModule, NgFor, NgClass, RouterLink, CurrencyPipe, UpperCasePipe, PercentPipe, LowerCasePipe],
   templateUrl: './student-list.component.html',
   styleUrl: './student-list.component.scss'
 })
