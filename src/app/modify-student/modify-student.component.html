@@ -2,22 +2,22 @@
 
   <div class="form-group">
     <label for="studentId">ID</label>
-    <input type="number" id="studentId" formControlName="studentId" class="form-input"/>
+    <input type="number" id="studentId" formControlName="studentId" class="form-input" [appFocus]="'green'"/>
   </div>
 
   <div class="form-group">
     <label for="studentName">Name</label>
-    <input type="text" id="studentName" formControlName="studentName" class="form-input"/>
+    <input type="text" id="studentName" formControlName="studentName" class="form-input" [appFocus]="'green'"/>
   </div>
 
   <div class="form-group">
     <label for="studentEmail">Email</label>
-    <input type="text" id="studentEmail" formControlName="studentEmail" class="form-input"/>
+    <input type="text" id="studentEmail" formControlName="studentEmail" class="form-input" [appFocus]="'green'"/>
   </div>
 
   <div class="form-group">
     <label for="phone">Phone</label>
-    <input type="tel" id="phone" formControlName="phone" class="form-input"/>
+    <input type="tel" id="phone" formControlName="phone" class="form-input" [appFocus]="'green'"/>
   </div>
 
   <div class="form-button">  <!-- Changed from "from-button" to "form-button" -->

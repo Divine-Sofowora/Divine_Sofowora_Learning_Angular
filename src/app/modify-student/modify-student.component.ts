@@ -5,12 +5,13 @@ import {User} from "../Shared/Models/user";
 import {UserService} from "../services/user.service";
 import {userList} from "../Shared/Models/mockData-user";
 import { Router } from "@angular/router";
+import {FocusDirective} from "../directives/focus.directive";
 
 
 @Component({
   selector: 'app-modify-student',
   standalone: true,
-  imports: [RouterLink,ReactiveFormsModule],
+  imports: [RouterLink, ReactiveFormsModule, FocusDirective],
   templateUrl: './modify-student.component.html',
   styleUrl: './modify-student.component.scss'
 })

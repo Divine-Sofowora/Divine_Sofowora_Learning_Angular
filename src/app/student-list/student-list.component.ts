@@ -17,13 +17,14 @@ import {UserService} from "../services/user.service";
 import {Observable} from "rxjs";
 import {Router,RouterLink} from "@angular/router";
 import {StudentCoursePipe} from "../pipes/student-course.pipe";
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 
 
 
 @Component({
   selector: 'app-student-list',
   standalone: true,
-  imports: [FormsModule, NgFor, NgClass, RouterLink, CurrencyPipe, UpperCasePipe, PercentPipe, LowerCasePipe, TitleCasePipe, DecimalPipe, StudentCoursePipe],
+  imports: [FormsModule, NgFor, NgClass, RouterLink, CurrencyPipe, UpperCasePipe, PercentPipe, LowerCasePipe, TitleCasePipe, DecimalPipe, StudentCoursePipe, HoverHighlightDirective],
   templateUrl: './student-list.component.html',
   styleUrl: './student-list.component.scss'
 })
