@@ -1,15 +1,28 @@
-<div class="nav-bar">
-  <nav>
-    <a routerLink="/student" routerLinkActive="active">Student List</a>
-    <a routerLink="/modify-student" routerLinkActive="active">Modify Student</a>
-  </nav>
-</div>
+<!--<div class="nav-bar">-->
+<!--  <nav>-->
+<!--    <a routerLink="/student" routerLinkActive="active">Student List</a>-->
+<!--    <a routerLink="/modify-student" routerLinkActive="active">Modify Student</a>-->
+<!--  </nav>-->
+<!--</div>-->
 
 
-<div>
+<!--<div>-->
+<!--  <router-outlet></router-outlet>-->
+<!--&lt;!&ndash;  <h1>{{ title }}</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;  <app-student-list-item [student]="userList[2]"></app-student-list-item>&ndash;&gt;-->
+<!--&lt;!&ndash;  <app-student-list></app-student-list>&ndash;&gt;-->
+<!--</div>-->
+
+<mat-toolbar color="primary">
+  <span>Student Management System</span>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/student" routerLinkActive="active">Student List</button>
+  <button routerLink="/modify-student" routerLinkActive="active">Modify Student</button>
+</mat-toolbar>
+
+<div class="app-container">
+  <h1>{{ title }}</h1>
+
+  <!--router outlet to display routed components -->
   <router-outlet></router-outlet>
-<!--  <h1>{{ title }}</h1>-->
-<!--  <app-student-list-item [student]="userList[2]"></app-student-list-item>-->
-<!--  <app-student-list></app-student-list>-->
 </div>
-

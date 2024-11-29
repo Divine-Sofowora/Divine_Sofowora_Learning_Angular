@@ -5,13 +5,15 @@ import { NgForOf, NgIf} from '@angular/common';
 import { StudentListComponent} from './student-list/student-list.component';
 import {StudentListItemComponent} from "./student-list-item/student-list-item.component";
 import {userList} from "./Shared/Models/mockData-user";
+import {MatToolbar} from "@angular/material/toolbar";
+import {MatButton} from "@angular/material/button";
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, NgIf, StudentListComponent, StudentListItemComponent, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, NgForOf, NgIf, StudentListComponent, StudentListItemComponent, RouterLink, RouterLinkActive, MatToolbar, MatButton],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -8,12 +8,13 @@ import { Router } from "@angular/router";
 import {FocusDirective} from "../directives/focus.directive";
 import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
 import {MatInput, MatInputModule} from "@angular/material/input";
+import {MatTooltip} from "@angular/material/tooltip";
 
 
 @Component({
   selector: 'app-modify-student',
   standalone: true,
-  imports: [RouterLink, ReactiveFormsModule, FocusDirective, MatFormField, MatInput,MatFormFieldModule,MatInputModule],
+  imports: [RouterLink, ReactiveFormsModule, FocusDirective, MatFormField, MatInput, MatFormFieldModule, MatInputModule, MatTooltip],
   templateUrl: './modify-student.component.html',
   styleUrl: './modify-student.component.scss'
 })
