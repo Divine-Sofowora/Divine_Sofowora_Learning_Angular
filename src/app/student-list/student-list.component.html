@@ -1,17 +1,51 @@
+<div class="mat-container">
+  <h2>Student List</h2>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-<div *ngFor="let student of userList" (click)="selectedStudent(student)" [appHoverHighlight]="'pink'">
-  <img [src]="student.imgPath">
-  <h3>Id:{{student.studentId}}</h3>
-  <p> name:{{student | studentCourse | titlecase }}</p>
-<!--  <h3> name: {{student.studentName | titlecase}} </h3>-->
-<!--  <p> Grade: {{student.phone }}</p>-->
-  <p> Email: {{student.studentEmail | uppercase  }}</p>
-  <p> School fees: {{student.fees | currency:'CAD': "symbol-narrow"}}</p>
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>ID</th>
+    <td mat-cell *matCellDef="let student">{{ student.studentId }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="studentName">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let student">{{ student | studentCourse | titlecase }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef>Email</th>
+    <td mat-cell *matCellDef="let student">{{ student.studentEmail | uppercase }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="phone">
+    <th mat-header-cell *matHeaderCellDef>Email</th>
+    <td mat-cell *matCellDef="let student">{{ student.phone }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="fees">
+    <th mat-header-cell *matHeaderCellDef>School Fees</th>
+    <td mat-cell *matCellDef="let student">{{ student.fees | currency: 'CAD': 'symbol-narrow' }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="showColumns"></tr>
+  <tr
+    mat-row
+    *matRowDef="let student; columns: showColumns"
+    [routerLink]="['/students', student.id]"
+    [appHoverHighlight]="'lightblue'"
+  ></tr>
+</table>
 
   <div><button type="button" (click)="onEdit()" class="btn edit-btn">EDIT</button></div>
-  <div><button type="button" (click)="onDelete(student.studentId)" class="btn delete-btn">Delete</button></div>
+  <div><button type="button" (click)="onDelete()" class="btn delete-btn">Delete</button></div>
 </div>
 
-
-
+<!--<div *ngFor="let student of userList" (click)="selectedStudent(student)" [appHoverHighlight]="'pink'">-->
+<!--  <img [src]="student.imgPath">-->
+<!--&lt;!&ndash;  <h3>Id:{{student.studentId}}</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;  <p> name:{{student | studentCourse | titlecase }}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;  <h3> name: {{student.studentName | titlecase}} </h3>&ndash;&gt;-->
+<!--&lt;!&ndash;  <p> Grade: {{student.phone }}</p>&ndash;&gt;-->
+<!--  <p> Email: {{student.studentEmail | uppercase  }}</p>-->
+<!--  <p> School fees: {{student.fees | currency:'CAD': "symbol-narrow"}}</p>-->
 

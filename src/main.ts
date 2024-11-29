@@ -7,6 +7,7 @@ import {StudentListItemComponent} from "./app/student-list-item/student-list-ite
 import {ModifyStudentComponent} from "./app/modify-student/modify-student.component";
 import {PageNotFoundComponent} from "./app/page-not-found/page-not-found.component";
 import {importProvidersFrom} from "@angular/core";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 const routes: Routes =[
@@ -25,7 +26,7 @@ const routes: Routes =[
 
 bootstrapApplication(AppComponent, {
   providers:[provideRouter(routes),
-  importProvidersFrom()]
+  importProvidersFrom(), provideAnimationsAsync()]
 
 });
 
