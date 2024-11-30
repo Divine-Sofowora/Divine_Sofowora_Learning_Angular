@@ -36,8 +36,13 @@
   ></tr>
 </table>
 
-  <div><button type="button" (click)="onEdit()" class="btn edit-btn">EDIT</button></div>
-  <div><button type="button" (click)="onDelete()" class="btn delete-btn">Delete</button></div>
+  <div>
+    <button type="button" (click)="onEdit()" class="btn edit-btn" mat-raised-button color="primary">EDIT</button>
+  </div>
+  <div>
+    <button type="button" (click)="onDelete()" class="btn delete-btn" mat-flat-button color="warn">Delete</button>
+  </div>
+
 </div>
 
 <!--<div *ngFor="let student of userList" (click)="selectedStudent(student)" [appHoverHighlight]="'pink'">-->

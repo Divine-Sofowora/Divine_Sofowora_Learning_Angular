@@ -26,8 +26,9 @@
     </mat-form-field>
 
 
-  <div class="form-button">  <!-- Changed from "from-button" to "form-button" -->
-    <button type="button" (click)="onAdd()" class="btn add-btn">Add</button>
-    <button type="button" (click)="onUpdate()" class="btn update-btn">Update</button>
-  </div>
-</form>
+    <div class="form-button">
+      <button type="button" (click)="onAdd()" class="btn add-btn" mat-raised-button color="primary">Add</button>
+      <button type="button" (click)="onUpdate()" class="btn update-btn" mat-flat-button color="accent">Update</button>
+    </div>
+
+  </form>

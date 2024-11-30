@@ -28,6 +28,7 @@ import {
   MatTable, MatTableDataSource
 } from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
+import {MatButton} from "@angular/material/button";
 
 
 
@@ -35,7 +36,7 @@ import {MatPaginator} from "@angular/material/paginator";
 @Component({
   selector: 'app-student-list',
   standalone: true,
-  imports: [FormsModule, NgFor, NgClass, RouterLink, CurrencyPipe, UpperCasePipe, PercentPipe, LowerCasePipe, TitleCasePipe, DecimalPipe, StudentCoursePipe, HoverHighlightDirective, MatTable, MatColumnDef, MatHeaderCell, MatCell, MatCellDef, MatHeaderCellDef, MatHeaderRow, MatRow, MatPaginator, MatHeaderRowDef, MatRowDef, NgIf],
+  imports: [FormsModule, NgFor, NgClass, RouterLink, CurrencyPipe, UpperCasePipe, PercentPipe, LowerCasePipe, TitleCasePipe, DecimalPipe, StudentCoursePipe, HoverHighlightDirective, MatTable, MatColumnDef, MatHeaderCell, MatCell, MatCellDef, MatHeaderCellDef, MatHeaderRow, MatRow, MatPaginator, MatHeaderRowDef, MatRowDef, NgIf, MatButton],
   templateUrl: './student-list.component.html',
   styleUrl: './student-list.component.scss'
 })

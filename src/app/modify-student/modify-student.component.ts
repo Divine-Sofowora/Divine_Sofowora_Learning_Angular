@@ -9,12 +9,13 @@ import {FocusDirective} from "../directives/focus.directive";
 import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
 import {MatInput, MatInputModule} from "@angular/material/input";
 import {MatTooltip} from "@angular/material/tooltip";
+import {MatButton} from "@angular/material/button";
 
 
 @Component({
   selector: 'app-modify-student',
   standalone: true,
-  imports: [RouterLink, ReactiveFormsModule, FocusDirective, MatFormField, MatInput, MatFormFieldModule, MatInputModule, MatTooltip],
+  imports: [RouterLink, ReactiveFormsModule, FocusDirective, MatFormField, MatInput, MatFormFieldModule, MatInputModule, MatTooltip, MatButton],
   templateUrl: './modify-student.component.html',
   styleUrl: './modify-student.component.scss'
 })
